@@ -72,16 +72,19 @@ This is the standard image size of many algorithms and it also decides the
 number of neurons on the first layer. Since these algorithms have fixed and
 pre-calculated weights and neurons, the image has to be fixed to match the
 default size.
+
 III. Image Superimposition: Most of the highly used algorithms are designed for
 colored image, hence, they have the RGB scale. That means, the default
 formation and size of image in these techniques is [224 X 224 X 3], 3
 denoting the RGB scale.To counter this, the images we have had to be bent according to the input
 required. Hence, we took 3 copies of grayscale images, and superimposed on
 each other, thus making the last dimension 3.
+
 IV. Weights trainable: To reduce the burden on the machine, and decrease the
 time taken to train the model, the trainable weights had to be stopped. If this
 step is skipped, the accuracy is improved drastically, but we would, need
 high computation power to perform this, which is not feasible.
+
 V. Model fitting and training: Finally, the model was trained by dividing the
 above obtained data into ‘Training set’ and ‘Validation set’. Number of
 epochs were modified to find a balance between the accuracy and time taken to train it.
